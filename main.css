@@ -1,0 +1,37 @@
+
+#left-panel {
+    /* PANEL AREA */
+    position: fixed;
+    background: lightgrey;
+    width: 30%;
+    height: 100%;
+    top: 0px; 
+    left: 0px;
+    
+    /* OW Logo */
+    background-image: url("images/ow_logo_gold.png");
+    background-repeat: no-repeat;
+    background-position: calc(100% + 120px) 25px; 
+    background-size: 400px 400px;
+}
+
+#main-content {
+    left: 30%;
+    top: 0px;
+    background: yellowgreen;
+    height: 1500px;
+    width: 100%;
+}
+
+.left-bar {
+    background: white;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+#results-bar {
+    opacity: 0.6;
+    top: 40%;
+    min-height: 100px;
+}
