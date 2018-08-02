@@ -5,25 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello :> </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <!--Imported libraries + framework-->
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+    <script src='https://d3js.org/d3.v4.min.js'></script>
+
+    <!--My CSS & Scripts-->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
+
+
 <body>
+    
     <!-- left panel | fixed -->
     <div id="left-panel">
-        <div id="search0bar" class="left-bar">
-
+        
+        <!--Toggle theme change-->
+        <div class="ui toggle checkbox left-content">
+            <input type="checkbox" name="public"><label>Night theme</label>
         </div>
-        <div id="results-bar" class="left-bar">
-            Enter your profile
+
+        <!--Search bar-->
+        <div id="search-bar" class="left-content">
+            <div class="ui input" style="width: 35%;"><input type="text" placeholder="Battle.net ID"></div> # 
+            <div class="ui input" style="width: 15%;"><input type="text" placeholder="1234"> </div>
+            
+            <!--Needs to initialize dropdown in javascript-->
+            <div class="ui selection dropdown compact">  
+                <input type="hidden" name="platform">
+                <i class="dropdown icon"></i>
+                <div class="default text">platform</div>
+                <div class="menu">
+                    <div class="item" data-value="1">PC</div>
+                    <div class="item" data-value="2">Xbox</div>
+                    <div class="item" data-value="0">PS</div>
+                </div>
+            </div>
+            
+            <button class="ui icon button"><i class="search icon"></i></button>  
+        </div>
+
+        <!--Results bar | hidden until searched-->
+        <div id="results-bar" class="left-content">
+            
+        </div>
+
+        <!--Footer in laft panel-->
+        <div id="footer-bar" class="left-content">
+            © Irene W.
         </div>
         
     </div>
     
     <!-- main content -->
     <div id="main-content">
-       
+        <div>
+            <h1>Search your profile</h1>
+        </div>
+        <div>results intro will go here</div>
+        <div>D3 bar chart results will go here</div>
+        <div>numerical stats will go here</div>
+        :)
     </div>
 </body>
 </html>
