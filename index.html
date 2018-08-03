@@ -15,16 +15,18 @@
     <script src="semantic/dist/semantic.min.js"></script>
     <script src='https://d3js.org/d3.v4.min.js'></script>
 
+
+
     <!--My CSS & Scripts-->
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script>-->
 </head>
 
 
 <body>
     
     <!-- left panel | fixed -->
-    <div id="left-panel">
+    <div id="leftpanel">
         
         <!--Toggle theme change-->
         <div class="ui toggle checkbox left-content">
@@ -32,7 +34,7 @@
         </div>
 
         <!--Search bar-->
-        <div id="search-bar" class="left-content">
+        <div id="searchbar" class="leftcontent">
             <div class="ui input" style="width: 35%;"><input type="text" placeholder="Battle.net ID"></div> # 
             <div class="ui input" style="width: 15%;"><input type="text" placeholder="1234"> </div>
             
@@ -51,20 +53,18 @@
             <button class="ui icon button"><i class="search icon"></i></button>  
         </div>
 
-        <!--Results bar | hidden until searched-->
-        <div id="results-bar" class="left-content">
-            
-        </div>
+        <!--Results bar | width = 0 until searched-->
+        <div id="resultsbar" class="leftcontent"></div>
 
         <!--Footer in laft panel-->
-        <div id="footer-bar" class="left-content">
+        <div id="footerbar" class="leftcontent">
             © Irene W.
         </div>
         
     </div>
     
     <!-- main content -->
-    <div id="main-content">
+    <div id="maincontent">
         <div>
             <h1>Search your profile</h1>
         </div>
@@ -73,5 +73,17 @@
         <div>numerical stats will go here</div>
         :)
     </div>
+
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!--dont use in prod-->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- My React components -->
+    <script src="SearchResults.js" type="text/babel"></script>
+
 </body>
 </html>
